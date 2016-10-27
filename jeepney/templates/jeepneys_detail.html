@@ -1,0 +1,28 @@
+{%extends "base.html" %}
+
+{%block head_title %}
+{{ instance.title}} |{{block.super}}
+{%endblock head_title %}
+
+{% block content %}
+<center>
+
+<font color="Black">
+
+  <h1>Davao Jeepney Finder</h1>
+  <h3>Find PUJ on your place</h3>
+
+<hr>
+
+</font>
+
+<font color="White">
+  {{instance.route}}<br/>
+  {{instance.place}}<br/>
+</font>
+<br>
+<br>
+<br>
+<a href="{% url 'list' %}">Back to list</a>
+
+{% endblock content %}
